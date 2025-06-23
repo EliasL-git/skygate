@@ -11,12 +11,22 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Main layout route with all nested routes */}
         <Route path="/" element={<Layout />}>
+          {/* Home route - index route renders at "/" */}
           <Route index element={<Home />} />
+          
+          {/* About section */}
           <Route path="about" element={<About />} />
+          
+          {/* Projects section */}
           <Route path="projects" element={<Projects />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="blog/:id" element={<BlogPost />} />
+          
+          {/* Blog section with nested routes */}
+          <Route path="blog">
+            <Route index element={<Blog />} />
+            <Route path=":id" element={<BlogPost />} />
+          </Route>
         </Route>
       </Routes>
     </Router>
