@@ -63,7 +63,6 @@ const BlogPost = () => {
   if (!post) {
     return <div className="error">Post not found</div>
   }
-
   return (
     <div className="blog-post">
       <div className="blog-post-header">
@@ -78,10 +77,15 @@ const BlogPost = () => {
         )}
       </div>
 
-      <div className="blog-post-content">
+      <div className="blog-post-content">        {/* Show special placeholder for blog post ID 1 */}
+        {id === '1' && (
+          <div className="placeholder-content">
+            <p>miawoooo</p>
+          </div>
+        )}
+        
         <p>{post.body}</p>
         
-        {/* Adding some extra content to make it look more like a real blog post */}
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -90,10 +94,10 @@ const BlogPost = () => {
         
         <h3>Key Points</h3>
         <ul>
-          <li>Modern web development practices</li>
-          <li>Performance optimization techniques</li>
-          <li>User experience considerations</li>
-          <li>Code maintainability and testing</li>
+          <li>mewaooooo</li>
+          <li>im running out of thingys to write here</li>
+          <li>this is the goodest bessest text everrrrr</li>
+          <li>also sum good text</li>
         </ul>
 
         <p>
