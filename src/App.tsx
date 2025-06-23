@@ -5,6 +5,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import Miawoooo from './pages/Miawoooo'
 import './App.css'
 
 function App() {
@@ -21,11 +22,11 @@ function App() {
           
           {/* Projects section */}
           <Route path="projects" element={<Projects />} />
-          
-          {/* Blog section with nested routes */}
+            {/* Blog section with nested routes */}
           <Route path="blog">
             <Route index element={<Blog />} />
             <Route path=":id" element={<BlogPost />} />
+            <Route path=":id/miawoooo" element={<Miawoooo />} />
           </Route>
         </Route>
       </Routes>
